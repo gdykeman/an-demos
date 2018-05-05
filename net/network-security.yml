@@ -12,4 +12,6 @@
 
 
     - include_role:
-        name: network_harden
+        name: network-template
+      vars:
+        network_template: harden

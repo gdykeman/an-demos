@@ -1,8 +1,0 @@
----
-- name: Setup BGP Peer
-  ios_config:
-    lines:
-      - "bgp router-id {{ bgp_router_id }}"
-      - address-family ipv4
-      - redistribute connected
-    parents: "router bgp {{ bgp_asn }}"

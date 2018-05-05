@@ -1,8 +1,0 @@
----
-- name: Setup BGP
-  ios_config:
-    lines:
-      - "bgp router-id {{ bgp_router_id }}"
-      - "neighbor {{ bgp_neighbor_ip }} remote-as {{ bgp_neighbor_asn }}"
-      - address-family ipv4
-    parents: "router bgp {{ bgp_asn }}"
