@@ -28,5 +28,9 @@
           - ip: "{{ tunnel_network | ipaddr(1) | ipaddr('address') }}"
             asn: "{{ tunnel_asn }}"
         bgp_network_list:
+          - network: "{{ interfaces.0.ip | ipaddr('network') }}"
+            mask: "{{ interfaces.0.ip | ipaddr('netmask') }}"
+          - network: "{{ interfaces.1.ip | ipaddr('network') }}"
+            mask: "{{ interfaces.1.ip | ipaddr('netmask') }}"
           - network: "{{ interfaces.2.ip | ipaddr('network') }}"
             mask: "{{ interfaces.2.ip | ipaddr('netmask') }}"
