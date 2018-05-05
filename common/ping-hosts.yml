@@ -5,3 +5,4 @@
   tasks:
     - name: Ping host
       ping: 
+      delegate_to: localhost
